@@ -1,0 +1,157 @@
+/* Cabeçalho */
+
+.cabecalho__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+/* Menu */
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 5rem;
+    width: 100%;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu__itens a:hover {
+    background-color: rgb(88, 177, 255);
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+/* Seção superior */
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    gap: 1.2rem;
+}
+
+/* Video */
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.videos__item {
+    height: 30rem;
+    width: 28rem;
+    flex-grow: 1;
+}
+
+/* Rodapé */
+
+.rodape__container {
+    display: flex;
+    /*flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap;
+}
+
+@media (min-width:834px) {
+    /* Cabeçalho */
+
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    /* Rodapé */
+
+    .rodape__container {
+        justify-content: space-between;
+    }
+
+    /* Menu */
+
+    .menu__container {
+        position: fixed;
+        width: 5rem;
+        left: 0%;
+        height: auto;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 0.9rem;
+        gap: 3.3rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    .menu__container {
+        width: 15rem;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 2rem 1.7rem 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        gap: 1.3rem;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .jogos {
+        order: 3;
+    }
+
+    .filmes {
+        order: 2;
+    }
+
+    .premium {
+        order: 1;
+    }
+
+    .maispagina {
+        order: 4;
+    }
+}
